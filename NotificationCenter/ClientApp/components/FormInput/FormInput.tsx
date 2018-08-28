@@ -1,8 +1,10 @@
 ﻿import * as React from "react";
 export default class FormInput extends React.Component<FormInputProps, FormInputState> {
-    constructor(props: FormInputProps) {
+    constructor(props: FormInputProps | undefined) {
         super(props);
-        this.state = { actualValue: props.initialValue };
+        if (props != undefined) {
+            this.state = { actualValue: props.initialValue };
+        }
     }
 
     public componentValueChanged(e: any) {

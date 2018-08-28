@@ -38,6 +38,7 @@
     <None Remove="ClientApp\components\FormSelect\FormSelect.tsx" />
     <None Remove="ClientApp\components\FormSelect\IFormSelect.ts" />
     <None Remove="ClientApp\components\FormTagInput.tsx" />
+    <None Remove="ClientApp\components\ListHOC\ListHOC.tsx" />
     <None Remove="ClientApp\components\NotificationGroupList.tsx\NotificationGroupList.tsx" />
     <None Remove="ClientApp\components\NotificationGroup\INotificationGroup.tsx" />
     <None Remove="ClientApp\components\NotificationGroup\NotificationGroup.tsx" />
@@ -66,6 +67,7 @@
     <TypeScriptCompile Include="ClientApp\components\FormSelect\FormSelect.tsx" />
     <TypeScriptCompile Include="ClientApp\components\FormSelect\IFormSelect.ts" />
     <TypeScriptCompile Include="ClientApp\components\FormSelect\FormTagInput.tsx" />
+    <TypeScriptCompile Include="ClientApp\components\ListHOC\ListHOC.tsx" />
     <TypeScriptCompile Include="ClientApp\components\NotificationGroupList.tsx\NotificationGroupList.tsx" />
     <TypeScriptCompile Include="ClientApp\components\NotificationGroup\NotificationGroup.tsx" />
     <TypeScriptCompile Include="ClientApp\components\NotificationGroup\INotificationGroup.tsx" />

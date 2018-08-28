@@ -7,6 +7,8 @@ import ApplicationLoader from "../ApplicationLoader/ApplicationLoader";
 import { INotificationDTO, INotificationGroupSuggestion } from "../Notification/INotification";
 import { WithContext as ReactTags } from 'react-tag-input';
 import FormInput from "../FormInput/FormInput";
+import { withLoading } from "../ListHOC/ListHOC";
+import { Component } from "react";
 interface DeviceProps { id: number }
 interface DeviceState extends IWaitableComponent {
     device: ISubscriberEditDTO
@@ -167,7 +169,11 @@ export default class Device extends React.Component<RouteComponentProps<DevicePr
     }
 
     render() {
+        const s: React.ComponentType<FormInputProps> = FormInput;
+        var Silenzio = withLoading<FormInputProps>(FormInput);
+
         return <div>
+            <Silenzio loading={true} error={this.getErrorFor("Description")} changeHandler={(e) => this.handleChange(e)} htmlTagFor="description" placeholder="Nome identificativo" initialValue={this.state.device.description} label="Nome identificativo" />
             <h1>Gestione device</h1>
             <ApplicationLoader hasDisplayableErrors={this.state.hasDisplayableErrors} hasFailedRequest={this.state.hasFailedRequest} isFetchingStartingData={this.state.isFetchingStartingData} isRunning={this.state.isFetchingStartingData}>
                 <form onSubmit={(e) => this.handleSubmit(e)}>
